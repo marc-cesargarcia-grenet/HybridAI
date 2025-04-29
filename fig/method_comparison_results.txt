@@ -1,0 +1,17 @@
+Method Comparison Results
+=======================
+
+Inference Times (seconds):
+--------------------------
+Case		FD		MLP		PINN
+a=3,b=3		0.050000	0.042691	0.008566
+
+L2 Errors:
+---------
+Case		MLP		PINN
+a=3,b=3		6.640602e-04	6.273211e-03
+
+Max Errors:
+----------
+Case		MLP		PINN
+a=3,b=3		2.051281e-03	2.228527e-02
