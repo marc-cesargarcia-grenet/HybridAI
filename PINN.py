@@ -252,7 +252,7 @@ def train_pinn(a, b):
     plt.title(f'PINN Training Losses (a={a}, b={b})')
     plt.legend()
     plt.grid(True)
-    plt.savefig(f"pinn_loss_a{a}_b{b}.png")
+    plt.savefig(f"fig/pinn_loss_a{a}_b{b}.png")
     
     return model
 
@@ -300,7 +300,7 @@ def evaluate_pinn(model, a, b, compare_with_fd=False):
     plt.colorbar(im1, ax=axes[1])
     
     plt.tight_layout()
-    plt.savefig(f"pinn_solution_a{a}_b{b}.png")
+    plt.savefig(f"fig/pinn_solution_a{a}_b{b}.png")
     
     if compare_with_fd:
         # Load finite difference solution if available
@@ -353,7 +353,7 @@ def evaluate_pinn(model, a, b, compare_with_fd=False):
                 plt.colorbar(im2, ax=axes[2])
                 
                 plt.tight_layout()
-                plt.savefig(f"pinn_vs_fd_a{a}_b{b}.png")
+                plt.savefig(f"fig/pinn_vs_fd_a{a}_b{b}.png")
                 
                 # Compute error metrics
                 l2_error = np.sqrt(np.mean((u_pinn - u_fd_resized)**2))
@@ -372,6 +372,6 @@ def evaluate_pinn(model, a, b, compare_with_fd=False):
 
 # ------------------------------
 if __name__ == "__main__":
-    # Example: Train and evaluate PINN for a=3, b=3
-    model_pinn = train_pinn(a=3, b=3)
-    evaluate_pinn(model_pinn, a=3, b=3, compare_with_fd=True)
+    # Example: Train and evaluate PINN
+    model_pinn = train_pinn(a=9, b=9)
+    evaluate_pinn(model_pinn, a=9, b=9, compare_with_fd=True)

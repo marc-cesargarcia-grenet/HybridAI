@@ -16,7 +16,7 @@ data = np.load(data_dir / "poisson_data.npz")
 F, U = data['f'], data['u']
 
 # Select test cases (a, b pairs)
-test_cases = [(3,3)]
+test_cases = [(3,3), (4,5), (8,4), (9,9)]
 N = 50  # grid size
 
 # Initialize results storage

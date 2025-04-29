@@ -316,6 +316,6 @@ def evaluate_mlp(model, a, b, compare_with_fd=False):
 
 # ------------------------------
 if __name__ == "__main__":
-    # Example: Train and evaluate MLP for a=3, b=3
-    model_mlp = train_mlp(a=3, b=3)
-    evaluate_mlp(model_mlp, a=3, b=3, compare_with_fd=True)
+    # Example: Train and evaluate MLP
+    model_mlp = train_mlp(a=9, b=9)
+    evaluate_mlp(model_mlp, a=9, b=9, compare_with_fd=True)
